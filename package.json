@@ -1,15 +1,33 @@
-{
-  "name": "xml-parser",
-  "version": "1.2.1",
-  "repository": "segmentio/xml-parser",
-  "description": "the little xml parser that could",
+{ "name": "xml-parser-fix-pmb",
+  "version": "1.2.3",
+  "description": "A fork of segmentio's simple non-compliant XML parser for nodejs, forked in order to maintain it.",
+  "keywords": [
+    "non-compliant",
+    "parser",
+    "robust",
+    "xml parser",
+    "xml"
+  ],
+
+  "author": "tj, gjohnson, madbence, et al.",
+  "homepage": "https://github.com/mk-pmb/xml-parser-fix-pmb#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/xml-parser-fix-pmb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/xml-parser-fix-pmb/issues"
+  },
+
+  "private": false, "license": "MIT",
+
   "scripts": {
     "test": "make test"
   },
-  "keywords": [
-    "xml",
-    "sucks"
-  ],
+  "directories": {
+    "test": "test"
+  },
+
   "dependencies": {
     "debug": "^2.2.0"
   },
@@ -18,5 +36,6 @@
     "mocha": "^2.2.5",
     "should": "^6.0.3"
   },
-  "license": "MIT"
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
 }
