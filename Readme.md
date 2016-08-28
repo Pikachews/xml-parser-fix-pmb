@@ -5,8 +5,10 @@ xml-parser-fix-pmb
 (Maintenance fork of [xml-parser](https://www.npmjs.com/package/xml-parser).)
 
 Simple non-compliant¹ XML parser because we just need to parse some basic
-responses and libxml takes forever to compile :D you probably don't want
-to use this unless you also have similar needs.
+responses and `libxml` takes forever to compile. :D
+You probably don't want to use this unless you also have similar needs.
+
+Read section "Caveats" below.
 
 
 ¹) It doesn't care much about XML validity rules, and will try to make
@@ -95,7 +97,18 @@ Yields:
      content: '' } }
 ```
 
+
+Caveats
+-------
+  * Fails for XML files that declare an `<?xml-stylesheet`,
+    cf. [PR #15](https://github.com/segmentio/xml-parser/pull/15).
+    PRs welcome; in the meantime, you may want to try
+    [xml-jsonify](https://www.npmjs.com/package/xml-jsonify) for those.
+    It yields plain JavaScript objects, in spite of its name.
+
+
+
+
 License
 -------
-
 MIT
