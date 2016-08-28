@@ -1,17 +1,29 @@
+﻿
+xml-parser-fix-pmb
+==================
 
-# xml-parser
+(Maintenance fork of [xml-parser](https://www.npmjs.com/package/xml-parser).)
 
-  Simple non-compliant XML parser because we just need to parse some basic responses and libxml takes forever to compile :D you probably don't want to use this unless you also have similar needs.
+Simple non-compliant¹ XML parser because we just need to parse some basic
+responses and libxml takes forever to compile :D you probably don't want
+to use this unless you also have similar needs.
 
-## Installation
 
+¹) It doesn't care much about XML validity rules, and will try to make
+sense of your file even if real XML parsers would refuse it as broken.
+
+
+Installation
+------------
+
+```text
+$ npm install xml-parser-fix-pmb
 ```
-$ npm install xml-parser
-```
 
-## Example
+Example
+-------
 
- JavaScript:
+JavaScript:
 
 ```js
 var fs = require('fs');
@@ -27,21 +39,21 @@ XML:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
- <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-   xmlns="urn:enterprise.soap.sforce.com">
-   <soapenv:Body>
-      <createResponse>
-         <result>
-            <id>003D000000OY9omIAD</id>
-            <success>true</success>
-         </result>
-         <result>
-            <id>001D000000HTK3aIAH</id>
-            <success>true</success>
-         </result>
-      </createResponse>
-   </soapenv:Body>
- </soapenv:Envelope>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns="urn:enterprise.soap.sforce.com">
+  <soapenv:Body>
+     <createResponse>
+        <result>
+           <id>003D000000OY9omIAD</id>
+           <success>true</success>
+        </result>
+        <result>
+           <id>001D000000HTK3aIAH</id>
+           <success>true</success>
+        </result>
+     </createResponse>
+  </soapenv:Body>
+</soapenv:Envelope>
 ```
 
 Yields:
@@ -83,6 +95,7 @@ Yields:
      content: '' } }
 ```
 
-# License
+License
+-------
 
-  MIT
+MIT
