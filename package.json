@@ -1,5 +1,5 @@
 { "name": "xml-parser-fix-pmb",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "A fork of segmentio's simple non-compliant XML parser for nodejs, forked in order to maintain it.",
   "keywords": [
     "non-compliant",

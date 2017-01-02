@@ -20,7 +20,7 @@ module.exports = parse;
  */
 
 function parse(xml) {
-  xml = xml.trim();
+  xml = String(xml).trim();
 
   // strip comments
   xml = xml.replace(/<!--[\s\S]*?-->/g, '');
@@ -32,10 +32,14 @@ function parse(xml) {
    */
 
   function document() {
-    return {
-      declaration: declaration(),
-      root: tag()
+    var doc = { declaration: declaration() }, moreDecl;
+    while (true) {
+      moreDecl = declaration();
+      if (!moreDecl) { break; }
+      doc.declaration += moreDecl;
     }
+    doc.root = tag();
+    return doc;
   }
 
   /**
